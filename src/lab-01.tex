@@ -1,0 +1,63 @@
+\documentclass{exam}
+\usepackage{amssymb}
+\usepackage{lipsum} 
+
+\newcommand\labnr{1}
+\newcommand\lab{Lab \labnr\ - Whatever}
+
+\newcommand\uni{Technical University of Cluj-Napoca}
+\newcommand\course{Computer Programming}
+
+\newcommand\lvlez{$\bigstar$}
+\newcommand\lvlmed{\lvlez\lvlez}
+\newcommand\lvlhard{\lvlmed\lvlez}
+
+
+\pagestyle{headandfoot}
+\firstpageheader{}{}{}
+\firstpagefootrule
+\firstpageheadrule
+\firstpagefooter{\sc\uni}{}{\sc\course, Lab \labnr}
+\runningheader{\sc\uni}{}{\sc\course, Lab \labnr}
+\runningheadrule
+\runningfootrule
+\runningfooter{}{\thepage}{}
+
+\begin{document}
+\begin{center}
+    \vspace*{0cm}
+    \bfseries\LARGE
+    \lab
+    \vspace*{1cm}
+\end{center}
+
+
+\begin{questions}
+    \question \lipsum[1][1-5] \lvlez
+    \question \lipsum[3][1-5]
+    \begin{parts}
+       \part \lipsum[10][1-5] \lvlez
+       \part \lipsum[20][1-5] \lvlez
+    \end{parts}
+    \question \lipsum[4][1-5] \lvlez
+    \question \lipsum[5][1-5] \lvlez
+    \question \lipsum[6][1-5] \lvlez
+    \question \lipsum[7][1-5] \lvlmed
+    \question \lipsum[8][1-5]
+    \begin{parts}
+       \part \lipsum[20][1-5] \lvlmed
+       \part \lipsum[21][1-5] \lvlmed
+    \end{parts}
+    \question \lipsum[9][1-5] \lvlhard
+    \question \lipsum[10][1-5] \lvlhard
+    \question \lipsum[11][1-5] \lvlhard
+    \question \lipsum[12][1-5]
+    \begin{parts}
+       \part \lipsum[30][1-5] \lvlhard
+       \part \lipsum[31][1-5] \lvlhard
+    \end{parts}
+    \question \lipsum[13][1-5] \lvlhard 
+\end{questions}
+% \newpage
+% ada
+\end{document}
