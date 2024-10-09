@@ -1,0 +1,66 @@
+\documentclass{exam}
+\usepackage{amssymb}
+\usepackage{lipsum} 
+\usepackage[
+backend=biber
+]{biblatex}
+\addbibresource{refs.bib}
+
+\newcommand\labnr{3}
+\newcommand\lab{Lab \labnr\ - Expressions in C}
+
+\newcommand\uni{Technical University of Cluj-Napoca}
+\newcommand\course{Computer Programming}
+
+\newcommand\lvlez{$\bigstar$}
+\newcommand\lvlmed{\lvlez\lvlez}
+\newcommand\lvlhard{\lvlmed\lvlez}
+
+
+\pagestyle{headandfoot}
+\firstpageheader{}{}{}
+\firstpagefootrule
+\firstpageheadrule
+\firstpagefooter{\sc\uni}{}{\sc\course, Lab \labnr}
+\runningheader{\sc\uni}{}{\sc\course, Lab \labnr}
+\runningheadrule
+\runningfootrule
+\runningfooter{}{\thepage}{}
+
+\begin{document}
+\begin{center}
+    \vspace*{0cm}
+    \bfseries\LARGE
+    \lab
+    \vspace*{1cm}
+\end{center}
+
+
+\begin{questions}   
+   \question Write a program to calculate the value $z=x^{y}$, for variables x and y of the type double. 
+   Hint: look up the function pow. \lvlez
+   \question Divide 5 by 2 and print the result. First use the integer data type then the float data type. \lvlez
+   \question Using conditional expressions, write a program which reads a real value for
+x and then computes the
+value for the function: \lvlmed
+\[ 
+f(x)= \left\{
+\begin{array}{ll}
+      x^2-7x+4, & x<-2 \\
+      0, & x=-2 \\
+      x^2+5x-2, & x>-2 \\
+\end{array} 
+\right. 
+\]
+   \question Write a program that reads the value of an angle expressed in degrees and calculates the values for
+its sine, cosine and tangent \lvlmed
+
+\end{questions}
+
+\medskip
+\section*{References}
+\begin{itemize}
+   \item Pb. 1-9 \cite{cplab02}
+\end{itemize}
+\printbibliography[heading=none]
+\end{document}

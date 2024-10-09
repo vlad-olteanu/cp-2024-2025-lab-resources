@@ -1,6 +1,10 @@
 \documentclass{exam}
 \usepackage{amssymb}
 \usepackage{lipsum} 
+\usepackage[
+backend=biber
+]{biblatex}
+\addbibresource{refs.bib}
 
 \newcommand\labnr{1}
 \newcommand\lab{Lab \labnr\ - Whatever}
@@ -33,7 +37,7 @@
 
 
 \begin{questions}
-    \question \lipsum[1][1-5] \lvlez
+    \question \lipsum[1][1-5] \cite{cplab02} \lvlez 
     \question \lipsum[3][1-5]
     \begin{parts}
        \part \lipsum[10][1-5] \lvlez
@@ -58,6 +62,7 @@
     \end{parts}
     \question \lipsum[13][1-5] \lvlhard 
 \end{questions}
-% \newpage
-% ada
+
+\medskip
+\printbibliography
 \end{document}

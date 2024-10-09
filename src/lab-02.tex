@@ -1,0 +1,79 @@
+\documentclass{exam}
+\usepackage{amssymb}
+\usepackage{lipsum} 
+\usepackage[
+backend=biber
+]{biblatex}
+\addbibresource{refs.bib}
+
+\newcommand\labnr{2}
+\newcommand\lab{Lab \labnr\ - Standard I/O in C}
+
+\newcommand\uni{Technical University of Cluj-Napoca}
+\newcommand\course{Computer Programming}
+
+\newcommand\lvlez{$\bigstar$}
+\newcommand\lvlmed{\lvlez\lvlez}
+\newcommand\lvlhard{\lvlmed\lvlez}
+
+
+\pagestyle{headandfoot}
+\firstpageheader{}{}{}
+\firstpagefootrule
+\firstpageheadrule
+\firstpagefooter{\sc\uni}{}{\sc\course, Lab \labnr}
+\runningheader{\sc\uni}{}{\sc\course, Lab \labnr}
+\runningheadrule
+\runningfootrule
+\runningfooter{}{\thepage}{}
+
+\begin{document}
+\begin{center}
+    \vspace*{0cm}
+    \bfseries\LARGE
+    \lab
+    \vspace*{1cm}
+\end{center}
+
+
+\begin{questions}   
+   \question Write a program to print an integer read from the standard input as an octal and a hexadecimal
+number.  \lvlez 
+   \question Write a program to print the number $\pi$ = 3.14159265 using various (floating point) format
+descriptors.  \lvlez 
+    \question Write a program to check what putch outputs when its argument is a value outside the range
+character values [32,126].  \lvlez \
+   \question Write a program to print the ASCII codes for the keys of your keyboard. Hint: use printf() with a
+proper descriptor for output. \lvlez  
+   \question Write a program to print the characters corresponding to the ASCII codes in the range [32,126].   \lvlez 
+
+   \question Write a program to read a lowercase letter string and print the corresponding uppercase letter string.\lvlmed 
+   \question Write a program to read a string with only capitals (uppercase letters), and print the corresponding
+lowercase letter string. \lvlmed 
+
+\question Write a program to containing invocation(s) of gets(s), where s is an array. Check the contents of
+each array member. Hint: use the debugger to set a breakpoint after the invocation of gets() and
+inspect the memory area containing the result. Why the newline character ('\textbackslash n') was replaced by '\textbackslash 0'?  \lvlmed
+   \question Write a program to calculate the sum, difference, product and quotient of a pair of real numbers.
+\textbf{Output the results in a table}, similar to the one below (you do not have to draw lines):   \lvlhard 
+\begin{center}
+   
+\begin{tabular}{|c|c|c|c|c|c|}
+   \hline
+   x & y & x+y & x-y & x*y & x/y \\
+   \hline
+   3 & 1.5 & 4.5 & 1.5 & 4.5 & 2 \\
+   \hline
+\end{tabular}
+\end{center}
+
+\question Same as the previous problem, but only show 2 decimals of the numbers and align the numbers to the left. Make each cell 8 characters wide. \lvlhard
+\end{questions}
+
+\medskip
+\section*{References}
+\begin{itemize}
+   \item Pb. 1-9 \cite{cplab02}
+\end{itemize}
+\printbibliography[heading=none]
+\end{document}
