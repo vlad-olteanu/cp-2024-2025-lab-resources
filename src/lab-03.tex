@@ -5,7 +5,14 @@
 backend=biber
 ]{biblatex}
 \addbibresource{refs.bib}
-
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+    citecolor=blue,
+}
 \newcommand\labnr{3}
 \newcommand\lab{Lab \labnr\ - Expressions in C}
 
@@ -29,38 +36,58 @@ backend=biber
 
 \begin{document}
 \begin{center}
-    \vspace*{0cm}
-    \bfseries\LARGE
-    \lab
-    \vspace*{1cm}
+   \vspace*{0cm}
+   \bfseries\LARGE
+   \lab
+   \vspace*{1cm}
 \end{center}
 
 
-\begin{questions}   
-   \question Write a program to calculate the value $z=x^{y}$, for variables x and y of the type double. 
+\begin{questions}
+   \question Write a program to calculate the value $z=x^{y}$, for variables x and y of the type double.
    Hint: look up the function pow. \lvlez
    \question Divide 5 by 2 and print the result. First use the integer data type then the float data type. \lvlez
-   \question Using conditional expressions, write a program which reads a real value for
-x and then computes the
-value for the function: \lvlmed
-\[ 
-f(x)= \left\{
-\begin{array}{ll}
-      x^2-7x+4, & x<-2 \\
-      0, & x=-2 \\
-      x^2+5x-2, & x>-2 \\
-\end{array} 
-\right. 
-\]
-   \question Write a program that reads the value of an angle expressed in degrees and calculates the values for
-its sine, cosine and tangent \lvlmed
+
+   \question Same as above, but try \textbf{incorrectly} printing the integer result using the \verb|%f| format specifier and the float result using the \verb|%d| format specifier. \lvlez
+
+   \question Write a program to show the number of bytes the C/C++ primitive data types take in the computer memory. Hint: Use \verb|sizeof()|. \lvlez
+
+   \question Write a program to convert a number of seconds into hours, minutes and seconds. If the number of hours goes past 24 it should return to 0. \lvlez
+
+   \question Write a program that reads 2 integers and shows the results of applying all the bitwise operations on them. Print the results using both \verb|%d| and \verb|%x|. \lvlez
+
+   \question Write a program that reads a positive integer number in the range [1600, 4900]. Knowing that that number represents a year, check whether that year is bissextile or not. A year is bissextile if it is divisible by 4, except for years divisible by 100 but not by 400. \lvlmed
+
+   \question Using conditional expressions (\verb|a ? b : c|), write a program which reads a real value for
+   x and then computes the
+   value for the function: \lvlmed
+   \[
+      f(x)= \left\{
+      \begin{array}{ll}
+         x^2-7x+4, & x<-2 \\
+         0,        & x=-2 \\
+         x^2+5x-2, & x>-2 \\
+      \end{array}
+      \right.
+   \]
+   \question Write a program which reads a real number
+x, representing a measurement for an angle in Radians,
+and then converts it to degrees, minutes, and seconds. \lvlmed
+
+   \question Write a program that reads the value of an angle expressed in degrees and calculates the values for its sine, cosine and tangent. \lvlmed
+
+   \question Check if the cosine of a given angle is equal to 0. \lvlhard
+
+   \question Write a program which reads the integer numbers into variables a, b, c, d and outputs the highest value of fractions a/b and c/d. \lvlmed
+
+   \question Write a program to convert Cartesian coordinates of a given point to polar coordinates. Conversion formulas: \href{https://en.wikipedia.org/wiki/Polar_coordinate_system#Converting_between_polar_and_Cartesian_coordinates}{Converting between polar and Cartesian coordinates}. \lvlhard
 
 \end{questions}
 
 \medskip
 \section*{References}
 \begin{itemize}
-   \item Pb. 1-9 \cite{cplab02}
+   \item Pb. 1-2, 4, 7-10, 12-13 \cite{cplab03}
 \end{itemize}
 \printbibliography[heading=none]
 \end{document}
