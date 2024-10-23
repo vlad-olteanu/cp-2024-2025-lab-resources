@@ -8,3 +8,4 @@ pdf/lab-01.pdf
 *.bcf
 *.blg
 *.run.xml
+*.out

@@ -1,0 +1,106 @@
+\documentclass{exam}
+\usepackage{amssymb}
+\usepackage{lipsum} 
+\usepackage[
+backend=biber
+]{biblatex}
+\addbibresource{refs.bib}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+    citecolor=blue,
+}
+\newcommand\labnr{4}
+\newcommand\lab{Lab \labnr\ - Statements in C}
+
+\newcommand\uni{Technical University of Cluj-Napoca}
+\newcommand\course{Computer Programming}
+
+\newcommand\lvlez{$\bigstar$}
+\newcommand\lvlmed{\lvlez\lvlez}
+\newcommand\lvlhard{\lvlmed\lvlez}
+
+
+\pagestyle{headandfoot}
+\firstpageheader{}{}{}
+\firstpagefootrule
+\firstpageheadrule
+\firstpagefooter{\sc\uni}{}{\sc\course, Lab \labnr}
+\runningheader{\sc\uni}{}{\sc\course, Lab \labnr}
+\runningheadrule
+\runningfootrule
+\runningfooter{}{\thepage}{}
+
+\begin{document}
+\begin{center}
+   \vspace*{0cm}
+   \bfseries\LARGE
+   \lab
+   \vspace*{1cm}
+\end{center}
+
+
+\begin{questions}
+   \question Real numbers of a sequence of size
+   n are read from the standard input. Find and print to
+   standard output: the minimum and the maximum values of this sequence, and their positions
+   (indices) in the sequence. \lvlez
+   \question Given a sequence of
+n real numbers sorted in ascending order, verify if a given value,
+x, exists in the given sequence, and display this value and its position. \lvlez
+   \question Write a program to generate all the prime numbers less than or equal to a natural
+   number,
+   n. \lvlez
+   \question Read from the standard input a natural number,
+   n. Find the greatest perfect square
+   that is less than or equal to
+   n. Then find the least prime number that is greater than or equal to
+   n. \lvlez
+   \question Read from the standard input a natural number,
+   n. Check if this number is palindrome. \lvlmed
+   \question Given a matrix of
+n $\times$ n elements verify if this matrix is symmetric. \lvlmed
+
+   \question Given 2 lists of integers compute the following:
+      \begin{parts}
+         \part The intersection of the 2 lists. \lvlez
+         \part The union of the 2 lists. \lvlmed
+         \part The elements of the first list that are not present in the second list. \lvlez
+      \end{parts}   
+   \question Read from the standard input the hexadecimal digits of an integer hexadecimal number.
+   Find and display the equivalent decimal number. \lvlmed
+   \question Read from the standard input the degree and the coefficients of the polynomial $p(x)=a_0+a_1*x^1+a_2*x^2+...+a_n*x^n$.
+   Compute and display the value of the polynomial for $x=x_0$ ($x_0$ is read from
+   the standard input). \lvlmed
+   \question  Write a program to perform the operations +, -, * on two polynomials:
+   \[
+      A(x) = a_0+a_1*x^1+a_2*x^2+...+a_n*x^n     \]
+   \[
+      B(x) = b_0+b_1*x^1+b_2*x^2+...+b_n*x^n
+   \]
+   The degrees and the coefficients are read from the keyboard. \lvlhard
+   \question Given a sequence of
+n integer numbers, extract the maximum length subsequence
+which is in ascending order. \lvlhard
+   \question Given a real number a written in base 10, write a program to convert this number in base B, where B $\leq$ 16. \lvlhard
+
+   \question Given a natural number n:
+      \begin{parts}
+         \part Find the number obtained by eliminating those digits that appear more than once in that number. \lvlhard
+         \part Find the number obtained by switching the first digit with the last one, the second with the
+next to last one, and so on. \lvlmed
+         \part Find the biggest number that could be obtained by a combination of its digits. \lvlhard
+      \end{parts}
+
+\end{questions}
+
+\medskip
+\section*{References}
+\begin{itemize}
+   \item Pb. 1-13 \cite{cplab04}
+\end{itemize}
+\printbibliography[heading=none]
+\end{document}
