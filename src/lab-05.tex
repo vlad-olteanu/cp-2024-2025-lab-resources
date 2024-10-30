@@ -1,0 +1,92 @@
+\documentclass{exam}
+\usepackage{amssymb}
+\usepackage{lipsum} 
+\usepackage[
+backend=biber
+]{biblatex}
+\addbibresource{refs.bib}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+    citecolor=blue,
+}
+\newcommand\labnr{5}
+\newcommand\lab{Lab \labnr\ - Functions in C}
+
+\newcommand\uni{Technical University of Cluj-Napoca}
+\newcommand\course{Computer Programming}
+
+\newcommand\lvlez{$\bigstar$}
+\newcommand\lvlmed{\lvlez\lvlez}
+\newcommand\lvlhard{\lvlmed\lvlez}
+
+
+\pagestyle{headandfoot}
+\firstpageheader{}{}{}
+\firstpagefootrule
+\firstpageheadrule
+\firstpagefooter{\sc\uni}{}{\sc\course, Lab \labnr}
+\runningheader{\sc\uni}{}{\sc\course, Lab \labnr}
+\runningheadrule
+\runningfootrule
+\runningfooter{}{\thepage}{}
+
+\begin{document}
+\begin{center}
+   \vspace*{0cm}
+   \bfseries\LARGE
+   \lab
+   \vspace*{1cm}
+\end{center}
+
+
+\begin{questions}   
+   \question Write a function which returns the highest perfect square which is less or equal to its
+parameter (a positive integer). \lvlez   
+   \question Write a function to check if its parameter (positive integer) is a perfect square. Then apply
+this function to a vector of positive integers, and extract all perfect squares and place them in
+another vector. \lvlmed
+   \question Write a function that has the following parameters:
+   \begin{itemize}
+      \item 2 integers
+      \item a pointer to an integer
+   \end{itemize}
+   The function should add the first 2 numbers and place the result in the integer pointed to by the 3rd parameter. 
+   Print the result outside of the function. \lvlez
+   \question Write a function that takes as parameters a float \verb|x| and an integer \verb|y| and returns $x^y$. \lvlez
+   \question Read an integer representing an amount of money expressed in RON from the standard
+input. Write a function to determine the minimum number of banknotes needed to pay that
+amount. \lvlez
+   \question Write a function which has a string of characters representing a number written using Roman
+numerals as a parameter, and returns the corresponding radix (base) 10 Arabian number. \lvlmed
+   \question Write the complementary function, which converts a base 10 Arabian number to a number
+written with Roman numerals. \lvlmed
+
+
+
+   \question Write a function to check whether a character string is a substring of another character
+string. The function should return the position at which the substring starts if true, or –1
+otherwise. Do not use any functions from \verb|string.h|. \lvlmed
+   \question Write the functions for addition, subtraction and multiplication of two matrices, and then
+compute
+$A=B*C - 2*(B+C)$, where B and C are two $n \times n$ matrices. \lvlhard
+   \question Write a function that has the following parameters:
+   \begin{itemize}
+      \item 2 integers
+      \item a function that takes 2 integers and returns an integer
+   \end{itemize}
+   The function should apply the function given as the third parameter on the first 2 parameters and return the result.
+   \lvlhard
+   
+
+\end{questions}
+\medskip
+\section*{References}
+\begin{itemize}
+   \item Pb. 1-2, 5-9 \cite{cplab05}
+\end{itemize}
+\printbibliography[heading=none]
+\end{document}
