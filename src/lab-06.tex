@@ -1,0 +1,75 @@
+\documentclass{exam}
+\usepackage{amssymb}
+\usepackage{lipsum} 
+\usepackage[
+backend=biber
+]{biblatex}
+\addbibresource{refs.bib}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+    citecolor=blue,
+}
+\newcommand\labnr{6}
+\newcommand\lab{Lab \labnr\ - Modular Programming}
+
+\newcommand\uni{Technical University of Cluj-Napoca}
+\newcommand\course{Computer Programming}
+
+\newcommand\lvlez{$\bigstar$}
+\newcommand\lvlmed{\lvlez\lvlez}
+\newcommand\lvlhard{\lvlmed\lvlez}
+
+
+\pagestyle{headandfoot}
+\firstpageheader{}{}{}
+\firstpagefootrule
+\firstpageheadrule
+\firstpagefooter{\sc\uni}{}{\sc\course, Lab \labnr}
+\runningheader{\sc\uni}{}{\sc\course, Lab \labnr}
+\runningheadrule
+\runningfootrule
+\runningfooter{}{\thepage}{}
+
+\begin{document}
+\begin{center}
+   \vspace*{0cm}
+   \bfseries\LARGE
+   \lab
+   \vspace*{1cm}
+\end{center}
+
+\begin{questions}   
+   \question Create a module that defines the following operations on arrays of integers: minimum, maximum, average, median. \lvlez
+   \question Create a module that implements sets and the operations on sets (union, intersection, difference). \lvlmed
+   \question Create a module that implements the K nearest neighbors algorithm. 
+   Given:
+   \begin{itemize}
+      \item $S$: a set of $n$ 2d points identified by their x and y coordinates and a letter $l$ (label). 
+      \item $p$: another 2d point that has no label
+      \item $k$: a positive integer
+   \end{itemize}
+
+   Find the closest $k$ points from $S$ to $p$ and return the label most commonly found among them. 
+   
+   Example: \begin{itemize}
+      \item $p$ = (x=1, y=1)
+      \item $k$ = 3 
+      \item $S$ = \{(x=0, y=0, l='r'), (x=0, y=1, l='r'), (x=-1.5, y=1.5, l='r'), (x=1.2, y=1.2, l='b'), (x=2, y=1, l='b')\}
+   \end{itemize}
+      The closest $k=3$ points from $S$ to $p$ are \{(x=0, y=1, l='r'), (x=1.2, y=1.2, l='b'), (x=2, y=1, l='b')\}. In these 3 points the label 'b' appears 2 times and the label 'r' appears 1 time, so the result is 'b' (the label with the most apparitions).
+   
+   Hint: In order to compute the distance between 2 points use the Euclidean distance: \[d(a,b)=\sqrt[]{(a_x-b_x)^2+(a_y-b_y)^2}\]
+
+   Hint: In order to store the points you can use either an array of structs or a matrix of $n \times 3$ floats, where \verb|m[i][0]| is the x coordinate of the i'th point, \verb|m[i][1]| is the y coordinate of the i'th point, etc. \lvlhard{}
+\end{questions}
+\medskip
+\section*{References}
+\begin{itemize}
+   \item Pb. 2 \cite{cplab06}
+\end{itemize}
+\printbibliography[heading=none]
+\end{document}
