@@ -1,0 +1,96 @@
+\documentclass{exam}
+\usepackage{amssymb}
+\usepackage{lipsum} 
+\usepackage[
+backend=biber
+]{biblatex}
+\addbibresource{refs.bib}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+    citecolor=blue,
+}
+\newcommand\labnr{7}
+\newcommand\lab{Lab \labnr\ - Pointers}
+
+\newcommand\uni{Technical University of Cluj-Napoca}
+\newcommand\course{Computer Programming}
+
+\newcommand\lvlez{$\bigstar$}
+\newcommand\lvlmed{\lvlez\lvlez}
+\newcommand\lvlhard{\lvlmed\lvlez}
+
+
+\pagestyle{headandfoot}
+\firstpageheader{}{}{}
+\firstpagefootrule
+\firstpageheadrule
+\firstpagefooter{\sc\uni}{}{\sc\course, Lab \labnr}
+\runningheader{\sc\uni}{}{\sc\course, Lab \labnr}
+\runningheadrule
+\runningfootrule
+\runningfooter{}{\thepage}{}
+
+\begin{document}
+\begin{center}
+   \vspace*{0cm}
+   \bfseries\LARGE
+   \lab
+   \vspace*{1cm}
+\end{center}
+
+\noindent Solve all the following problems using only pointers, pointer expressions and heap allocation:
+\begin{questions}
+   \question Write a function to sort a vector with real number elements. \lvlez
+   \question Write a function to sort a string of characters in alphabetical order. \lvlez
+   \question Write a function to merge two vectors. The given vectors contain real number elements, in ascending order. The result vector must contain only the distinct elements of the two given vectors, also in ascending order. \lvlez
+   \question Write functions to read, display, and multiply 2 matrices. \lvlmed
+   \question Write a function to calculate the transposed of a matrix. \lvlmed
+   \question Write a function to calculate the k-th power of a square matrix. \lvlmed
+   \question Write a function to compute the value of the derivative of a polynomial $P$, of degree $n$, in a given point $x=x0$. The degree and  coefficients of the polynomial and the point $x0$ will be passed as parameters. \lvlmed
+   \question Write a function to compute the product of two polynomials. \lvlhard
+   \question Write a function that has the following parameters:
+      \begin{itemize}
+         \item a matrix of floats 
+         \item the number of rows in the matrix
+         \item the number of columns in the matrix
+         \item a function that takes as parameters a vector of floats, the length of the vector and returns a float.
+      \end{itemize}
+   The function should apply the function given as parameter to every column of the matrix and return the results in a new vector. 
+   
+   E.g.:
+   \[
+   M = 
+  \left[ {\begin{array}{cccc}
+    1 & 2 & 3 & 4 \\
+    5 & 6 & 7 & 8 \\
+    9 & 10 & 11 & 12 \\
+  \end{array} } \right] 
+  \quad 
+  \quad 
+  sum(v, n) = \sum_{i=0}^{n-1} v_i
+  \quad
+  \quad 
+  f(M, 3, 4, sum) \Rightarrow \left[ {\begin{array}{cccc}
+    15 & 18 & 21 & 24 \\
+  \end{array} } \right]
+   \]
+   
+   \lvlhard
+\end{questions}
+\medskip
+\noindent You are not allowed to use the following in solving the problems:
+\begin{itemize}
+   \item stack allocated arrays (e.g. \verb|int v[256]|)
+   \item the indexing operator (e.g. \verb|v[i]|)
+\end{itemize}
+\medskip
+\section*{References}
+\begin{itemize}
+   \item Pb. 1-8 \cite{cplab07}
+\end{itemize}
+\printbibliography[heading=none]
+\end{document}
