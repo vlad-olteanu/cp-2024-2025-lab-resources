@@ -1,0 +1,71 @@
+\documentclass{exam}
+\usepackage{amssymb}
+\usepackage{lipsum} 
+\usepackage[
+backend=biber
+]{biblatex}
+\addbibresource{refs.bib}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+    citecolor=blue,
+}
+\newcommand\labnr{10}
+\newcommand\lab{Lab \labnr\ - Structures, Union, Enumerations}
+
+\newcommand\uni{Technical University of Cluj-Napoca}
+\newcommand\course{Computer Programming}
+
+\newcommand\lvlez{$\bigstar$}
+\newcommand\lvlmed{\lvlez\lvlez}
+\newcommand\lvlhard{\lvlmed\lvlez}
+
+
+\pagestyle{headandfoot}
+\firstpageheader{}{}{}
+\firstpagefootrule
+\firstpageheadrule
+\firstpagefooter{\sc\uni}{}{\sc\course, Lab \labnr}
+\runningheader{\sc\uni}{}{\sc\course, Lab \labnr}
+\runningheadrule
+\runningfootrule
+\runningfooter{}{\thepage}{}
+
+\begin{document}
+\begin{center}
+   \vspace*{0cm}
+   \bfseries\LARGE
+   \lab
+   \vspace*{1cm}
+\end{center}
+
+\begin{questions}
+   \question Write a modular program which reads student related data for a group, namely: name, date of
+birth, residence address, and prints them in alphabetical order according to their name. \lvlez
+   \question Using the union type containing the structures needed to represent circles, rectangles, squares,
+and triangles write a function to compute the area of the corresponding geometric figure. \lvlez
+   \question Write a program to implement the rational data type ($\mathbb{Q}$) as a structure composed of a numerator (integer) and a
+denominator (integer). 
+   Operations that have to be implemented: addition, subtraction, division, multiplication, simplification. \lvlez
+   \question Write a program to implement the complex data type ($\mathbb{C}$). 
+   Operations that have to be implemented: addition, subtraction, division, multiplication. \lvlmed
+   \question A sparse polynomial is a polynomial that has most of its coefficients equal to 0. Write a program which stores a sparse polynomial of degree $m$, displays that polynomial, and finds its value for a given input $x$. \lvlmed
+   \question Using a structure to store a date (year, month, day), write a program to display the
+number of the day in a year, and the number of days to the end of that year. \lvlmed
+   \question A sparse matrix is a matrix that has most of its elements equal to 0. Find an effective way to store sparse matrices, and write functions to add, subtract, and multiply pairs of such matrices. \lvlhard
+   \question A truck can carry at most
+m kilograms. The name of the materials, the amounts in kilograms, and
+the price per kilo are known. Find a load composition in such a way the value of the load is
+maximum. \lvlhard
+   \question Write a program that implements singly-linked dynamically linked lists. Operations that have to be implemented: node insertion, node deletion, printing the list. \lvlhard
+\end{questions}
+\medskip
+\section*{References}
+\begin{itemize}
+   \item Pb. 1-3, 5-9 \cite{cplab10}
+\end{itemize}
+\printbibliography[heading=none]
+\end{document}
