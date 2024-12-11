@@ -1,0 +1,72 @@
+\documentclass{exam}
+\usepackage{amssymb}
+\usepackage{lipsum} 
+\usepackage[
+backend=biber
+]{biblatex}
+\addbibresource{refs.bib}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+    citecolor=blue,
+}
+\newcommand\labnr{11}
+\newcommand\lab{Lab \labnr\ - File Input/Output}
+
+\newcommand\uni{Technical University of Cluj-Napoca}
+\newcommand\course{Computer Programming}
+
+\newcommand\lvlez{$\bigstar$}
+\newcommand\lvlmed{\lvlez\lvlez}
+\newcommand\lvlhard{\lvlmed\lvlez}
+
+
+\pagestyle{headandfoot}
+\firstpageheader{}{}{}
+\firstpagefootrule
+\firstpageheadrule
+\firstpagefooter{\sc\uni}{}{\sc\course, Lab \labnr}
+\runningheader{\sc\uni}{}{\sc\course, Lab \labnr}
+\runningheadrule
+\runningfootrule
+\runningfooter{}{\thepage}{}
+
+\begin{document}
+\begin{center}
+   \vspace*{0cm}
+   \bfseries\LARGE
+   \lab
+   \vspace*{1cm}
+\end{center}
+
+\begin{questions}
+   \question  Create a text file containing a list of items a shop sells. An item is represented as a structure which
+contains:
+   \begin{itemize}
+      \item a code
+      \item a name
+      \item a unit of measure
+      \item the amount
+      \item the price per unit
+   \end{itemize} 
+   The items are read from the keyboard. \lvlez
+   \question Same as the previous problem, but use a binary file. \lvlmed
+   \question Write a program to concatenate 2 text files. \lvlez
+   \question Write a program to concatenate 2 binary files. \lvlez
+   \question Write a program that prints the contents of a binary file to the screen in hexadecimal. Print a new line after every 64 bytes. \lvlez
+   \question Write a program to find all the occurrences of a word in a text file. The program will print to the screen the line and the column where each occurrence of the word is found. \lvlmed
+   \question Write a program which compares the contents of two existing text files and prints the lines which are different. \lvlez
+   \question Starting with the file created at problem 1 or 2, create another one where the items are sorted ascending on their code field. \lvlmed
+   \question Using the file created at problem 1 or 2, write functions to add, search and delete items from the shop. \lvlhard
+   \question Using the files created at problem 1 or 2, write a function to merge 2 data files. If an item is found in both files the quantity of the item in the new file should be the sum of the quantities in the 2 original files. \lvlhard
+\end{questions}
+\medskip
+\section*{References}
+\begin{itemize}
+   \item Pb. 1, 7-10 \cite{cplab11}
+\end{itemize}
+\printbibliography[heading=none]
+\end{document}
